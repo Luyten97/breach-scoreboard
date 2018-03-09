@@ -84,7 +84,7 @@ function ShowScoreBoard()
 		name = "Spectators",
 		list = team.GetPlayers( TEAM_SPEC ),
 		color = color_white,
-		color2 = color_black
+		color2 = color_white
 	})
 
 	// Sort all
