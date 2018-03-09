@@ -133,7 +133,7 @@ function ShowScoreBoard()
 	local width = 25
 	
 	local mainpanel = vgui.Create( "DPanel", Frame )
-	mainpanel:SetSize(ScrW() / 2.25, ScrH() / 1.3)
+	mainpanel:SetSize(ScrW() / 1.5, ScrH() / 1.3)
 	mainpanel:SetPos(Frame:CenterHorizontal(0.5), Frame:CenterVertical(0.75))
 	mainpanel:MoveTo( Frame:GetWide()/2 - mainpanel:GetWide()/2, Frame:CenterVertical(0.75), 0.2, 0, -1)
 	mainpanel.Paint = function( self, w, h )
@@ -199,7 +199,7 @@ function ShowScoreBoard()
 	if RanksEnabled() then
 		table.ForceInsert(sbpanels, {
 			name = "Group",
-			size = panelwidth * 2
+			size = panelwidth
 		})
 	end
 
@@ -358,10 +358,10 @@ function ShowScoreBoard()
 						xalign = TEXT_ALIGN_LEFT,
 						yalign = TEXT_ALIGN_CENTER
 					})
-					draw.RoundedBox( 0, width + 150, 0, 125, h, Color(0,0,0,120) )
+					draw.RoundedBox( 0, (scroll_panel:GetWide()/2) - 87.5, 0, 175, h, Color(0,0,0,120) )
 					draw.Text( {
 						text = txt,
-						pos = { width + 212, h / 2 },
+						pos = {scroll_panel:GetWide()/2, h / 2 },
 						font = "sb_names",
 						color = tab.color2,
 						xalign = TEXT_ALIGN_CENTER,
